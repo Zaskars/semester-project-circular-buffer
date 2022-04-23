@@ -139,7 +139,7 @@ class Llist:
         '''Полная очистка буфера.'''
         self.__init__(self.oldcapacity)
 
-@timer_func
+#@timer_func
 def addfunc(dataset):
     with open(dataset, 'r', newline='') as csvfile:
         list_ = Llist(len(pd.read_csv(dataset)))
@@ -174,12 +174,11 @@ def deletefunc(dataset):
 
 
 if __name__ == '__main__':
-    list_ = addfunc('add/dataset.csv')
+    #list_ = addfunc('add/dataset3.csv')
     for i in range(10):
-        pass
-        #list_ = addfunc('data/add/dataset5_step.csv')
+        #pass
+        list_ = addfunc('add/dataset5_step.csv')
         #getfunc('get/dataset_step.csv')
         #setfunc('set/dataset_step.csv')
         #resizefunc('resize/dataset_step.csv')
-        #deletefunc('add/dataset_step.csv')
-    
+        deletefunc('add/dataset5_step.csv')
